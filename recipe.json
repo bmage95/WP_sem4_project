@@ -1,0 +1,28 @@
+[
+    {
+      "name": "Spaghetti Bolognese",
+      "description": "Classic Italian pasta dish with rich tomato sauce and ground beef.",
+      "instructions": "1. Cook spaghetti according to package instructions. \n2. In a large skillet, brown ground beef over medium heat. Drain excess fat. \n3. Add diced onions, minced garlic, and chopped carrots. Cook until vegetables are soft. \n4. Stir in crushed tomatoes, tomato paste, dried oregano, salt, and pepper. Simmer for 20 minutes. \n5. Serve sauce over cooked spaghetti. Enjoy!"
+    },
+    {
+      "name": "Chicken Stir-Fry",
+      "description": "Healthy and flavorful stir-fried chicken with colorful vegetables.",
+      "instructions": "1. Slice chicken breast into thin strips. \n2. Heat oil in a wok or large skillet over high heat. \n3. Add chicken strips and stir-fry until cooked through. Remove chicken and set aside. \n4. In the same wok, add sliced bell peppers, broccoli florets, and sliced carrots. Stir-fry until vegetables are tender-crisp. \n5. Return chicken to the wok, add soy sauce, minced ginger, and garlic. Stir well to combine. \n6. Serve hot with rice or noodles."
+    },
+    {
+      "name": "Classic Caesar Salad",
+      "description": "Refreshing salad with crisp romaine lettuce, crunchy croutons, and tangy Caesar dressing.",
+      "instructions": "1. Tear washed and dried romaine lettuce leaves into bite-sized pieces. \n2. In a large bowl, toss lettuce with Caesar dressing until well coated. \n3. Add homemade or store-bought croutons and grated Parmesan cheese. \n4. Toss salad gently to combine all ingredients. \n5. Serve immediately as a side dish or add grilled chicken for a complete meal."
+    },
+    {
+      "name": "Beef Tacos",
+      "description": "Mexican-inspired dish with seasoned ground beef, salsa, and toppings in a crispy taco shell.",
+      "instructions": "1. In a skillet, brown ground beef over medium heat. Drain excess fat. \n2. Add taco seasoning mix and water. Cook until beef is well coated and liquid has evaporated. \n3. Warm taco shells in the oven according to package instructions. \n4. Spoon seasoned beef into taco shells. \n5. Top with shredded lettuce, diced tomatoes, shredded cheese, and salsa. \n6. Serve immediately with sour cream and guacamole on the side."
+    },
+    {
+      "name": "Chocolate Chip Cookies",
+      "description": "Classic homemade cookies with chocolate chips, perfect for dessert or snacking.",
+      "instructions": "1. Preheat oven to 350°F (175°C). \n2. In a mixing bowl, cream together softened butter, white sugar, and brown sugar until light and fluffy. \n3. Beat in eggs one at a time, then stir in vanilla extract. \n4. Gradually blend in flour, baking soda, and salt until well combined. \n5. Fold in chocolate chips. \n6. Drop spoonfuls of dough onto ungreased baking sheets. \n7. Bake for 8 to 10 minutes or until edges are golden brown. \n8. Allow cookies to cool on baking sheets for a few minutes before transferring to wire racks to cool completely."
+    }
+  ]
+  
