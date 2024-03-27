@@ -1,0 +1,1 @@
+This is a basic cookbook site, which uses HTML and angluar js for front end and node js for back end services.
