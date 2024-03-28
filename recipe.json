@@ -2,7 +2,8 @@
     {
       "name": "Spaghetti Bolognese",
       "description": "Classic Italian pasta dish with rich tomato sauce and ground beef.",
-      "instructions": "1. Cook spaghetti according to package instructions. \n2. In a large skillet, brown ground beef over medium heat. Drain excess fat. \n3. Add diced onions, minced garlic, and chopped carrots. Cook until vegetables are soft. \n4. Stir in crushed tomatoes, tomato paste, dried oregano, salt, and pepper. Simmer for 20 minutes. \n5. Serve sauce over cooked spaghetti. Enjoy!"
+      "instructions": "1. Cook spaghetti according to package instructions. \n2. In a large skillet, brown ground beef over medium heat. Drain excess fat. \n3. Add diced onions, minced garlic, and chopped carrots. Cook until vegetables are soft. \n4. Stir in crushed tomatoes, tomato paste, dried oregano, salt, and pepper. Simmer for 20 minutes. \n5. Serve sauce over cooked spaghetti. Enjoy!",
+      "image_url":""
     },
     {
       "name": "Chicken Stir-Fry",
