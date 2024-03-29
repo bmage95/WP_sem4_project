@@ -29,15 +29,13 @@
 <div id="recipe-container"></div>
 
 <script>
-  // Fetch random recipe from the server when the page is opened
-  window.onload = () => {
-    fetch('/random', { method: 'GET' })
-      .then(response => response.json())
-      .then(data => {
-        displayRecipe(data);
-      })
-      .catch(error => console.error('Error fetching random recipe:', error));
-  };
+  // Fetch random recipe from the server
+  fetch('/random', { method: 'GET' })
+    .then(response => response.json())
+    .then(data => {
+      displayRecipe(data);
+    })
+    .catch(error => console.error('Error fetching random recipe:', error));
 
   function displayRecipe(recipe) {
     const recipeContainer = document.getElementById('recipe-container');
