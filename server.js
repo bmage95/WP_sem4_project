@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const PORT = 3008;
+const PORT = 3010;
 
 // Read recipe data from JSON file
 function readRecipeData() {
@@ -35,6 +35,24 @@ const server = http.createServer((req, res) => {
         res.end(data);
       }
     });
+  } else if (req.url === '/about.html' && req.method === 'GET') {
+    // Check if already at /about.html, if not, redirect
+    if (req.url !== '/about.html') {
+      res.writeHead(301, { 'Location': '/about.html' });
+      res.end();
+    } else {
+      // Serve the about.html file
+      const filePath = path.join(__dirname, 'about.html');
+      fs.readFile(filePath, (err, data) => {
+        if (err) {
+          res.writeHead(404, { 'Content-Type': 'text/plain' });
+          res.end('File not found');
+        } else {
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(data);
+        }
+      });
+    }
   } else {
     // Serve the main.html file for any other request
     const filePath = path.join(__dirname, 'main.html');
