@@ -36,22 +36,40 @@
     margin-bottom: 5px;
   }
 </style>
+
 </head>
 <body>
 <h1>View or Edit Recipe</h1>
 <form id="search-form">
-  <input type="text" id="recipe-name" placeholder="Enter recipe name">
+  <div> 
+    <input type="text" id="recipe-name" placeholder="Enter recipe name">
+    <select name="recipe-difficulty">
+      <option value="0">Select from below</option>
+      <option value="1">Spaghetti Bolognese</option>
+      <option value="2">Chicken Stir-Fry</option>
+      <option value="3">Classic Caesar Salad</option>
+      <option value="4">Chicken Tacos</option>
+      <option value="5">Chocolate Chip Cookies</option>
+    </select>
+  </div>
   <button type="submit">Search</button>
 </form>
+
 <div id="recipe-details"></div>
 
 <script>
   const form = document.getElementById('search-form');
   const recipeDetailsContainer = document.getElementById('recipe-details');
+  const recipeNameInput = document.getElementById('recipe-name');
+  const difficultySelect = document.querySelector('select[name="recipe-difficulty"]');
+
+  difficultySelect.addEventListener('change', (event) => {
+    recipeNameInput.value = event.target.value === '' ? '' : event.target.options[event.target.selectedIndex].text;
+  });
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const recipeName = document.getElementById('recipe-name').value.trim();
+    const recipeName = recipeNameInput.value.trim();
     if (recipeName !== '') {
       fetch(`/search?name=${recipeName}`, { method: 'GET' })
         .then(response => response.json())
@@ -60,7 +78,7 @@
         })
         .catch(error => console.error('Error fetching recipe:', error));
     } else {
-      recipeDetailsContainer.innerHTML = '<p>Please enter a recipe name.</p>';
+      recipeDetailsContainer.innerHTML = '<p></p>';
     }
   });
 
@@ -83,5 +101,6 @@
     window.location.href = `/edit.html?name=${recipeName}`;
   }
 </script>
+
 </body>
 </html>
