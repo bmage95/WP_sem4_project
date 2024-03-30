@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const url = require('url');
-const PORT = 3002;
+const PORT = 3000;
 
 // Read recipe data from JSON file
 function readRecipeData() {
@@ -40,7 +40,25 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, { 'Content-Type': 'application/json' });
             res.end(JSON.stringify({ message: 'Recipe added successfully' }));
         });
-    } else if (parsedUrl.pathname === '/today.html' && req.method === 'GET') {
+    }
+    else if (req.url === '/add' && req.method === 'POST') {
+        // Handle recipe addition
+        let body = '';
+        req.on('data', chunk => {
+            body += chunk.toString(); // convert Buffer to string
+        });
+        req.on('end', () => {
+            const newRecipe = JSON.parse(body);
+            const recipes = readRecipeData();
+            recipes.push(newRecipe);
+            fs.writeFileSync(path.join(__dirname, 'recipe.json'), JSON.stringify(recipes, null, 2), 'utf8');
+            
+            // Send a redirect response to the client
+            res.writeHead(302, { 'Location': '/main.html' });
+            res.end();
+        });
+    }
+     else if (parsedUrl.pathname === '/today.html' && req.method === 'GET') {
         // Serve the today.html file
         const filePath = path.join(__dirname, 'today.html');
         fs.readFile(filePath, (err, data) => {
