@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>View or Edit Recipe</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #recipe-details {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 5px;
+  }
+</style>
+</head>
+<body>
+<h1>View or Edit Recipe</h1>
+<form id="search-form">
+  <input type="text" id="recipe-name" placeholder="Enter recipe name">
+  <button type="submit">Search</button>
+</form>
+<div id="recipe-details"></div>
+
+<script>
+  const form = document.getElementById('search-form');
+  const recipeDetailsContainer = document.getElementById('recipe-details');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const recipeName = document.getElementById('recipe-name').value.trim();
+    if (recipeName !== '') {
+      fetch(`/search?name=${recipeName}`, { method: 'GET' })
+        .then(response => response.json())
+        .then(data => {
+          displayRecipe(data);
+        })
+        .catch(error => console.error('Error fetching recipe:', error));
+    } else {
+      recipeDetailsContainer.innerHTML = '<p>Please enter a recipe name.</p>';
+    }
+  });
+
+  function displayRecipe(recipe) {
+    if (recipe) {
+      recipeDetailsContainer.innerHTML = `
+        <h2>${recipe.name}</h2>
+        <p><strong>Description:</strong> ${recipe.description}</p>
+        <p><strong>Instructions:</strong></p>
+        <p>${recipe.instructions}</p>
+        <button onclick="editRecipe('${recipe.name}')">Edit Recipe</button>
+      `;
+    } else {
+      recipeDetailsContainer.innerHTML = '<p>Recipe not found.</p>';
+    }
+  }
+
+  function editRecipe(recipeName) {
+    // Redirect to the edit page with the recipe name
+    window.location.href = `/edit.html?name=${recipeName}`;
+  }
+</script>
+</body>
+</html>
