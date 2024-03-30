@@ -1,25 +1,43 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Cookbook Website</title>
-</head>
-
-<body>
-    <header>
-        <h1>About Us</h1>
-        <style>body {
-            font-family: Arial, sans-serif;
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
+            color: #333;
         }
         
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header Styles */
         header {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
         }
         
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        /* Main Content Styles */
         main {
             padding: 20px;
         }
@@ -28,91 +46,85 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: white;
-            padding: 20px;
+            background-color: #fff;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info {
+            margin-left: 40px;
+        }
+        
+        .info h2 {
+            font-size: 28px;
             margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #6C5CE7;
         }
         
-        a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        
-        .subscribe-btn {
-            background-color: #333;
-        }
-        
-        .subscribe-btn:hover {
-            background-color: #555;
-        }
-        
-        .explore-btn {
-            background-color: #6C5CE7;
-        }
-        
-        .explore-btn:hover {
-            background-color: #8E44AD;
-        }
-        
-        .contact-btn {
-            background-color: #2ECC71;
-        }
-        
-        .contact-btn:hover {
-            background-color: #27AE60;
+        .info p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
         
         .team {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .team h2 {
-            text-align: center;
-            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
         .member {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         
         .member img {
-            max-width: 150px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin-bottom: 10px;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         
+        .member h3 {
+            font-size: 22px;
+            margin-top: 15px;
+            color: #6C5CE7;
+        }
+        
+        .member p {
+            font-size: 16px;
+            margin-top: 8px;
+            color: #777;
+        }
+        
+        /* Footer Styles */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }</style>
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
     </header>
 
     <main>
         <section class="about">
             <div class="image">
-                <img src="cookbook.jpg" alt="Cookbook Image">
+                <img src="images.png" alt="Cookbook Image">
             </div>
             <div class="info">
                 <h2>Welcome to Our Cookbook Website!</h2>
-                <p>Are you passionate about cooking and trying new recipes? You've come to the right place! Our
-                    cookbook website is dedicated to bringing you a wide range of delicious recipes from around the
-                    world.</p>
-                <p>Whether you're a beginner looking to learn the basics or an experienced chef searching for
-                    inspiration, our collection of recipes has something for everyone.</p>
+                <p>Are you passionate about cooking and trying new recipes? You've come to the right place! Our cookbook website is dedicated to bringing you a wide range of delicious recipes from around the world.</p>
+                <p>Whether you're a beginner looking to learn the basics or an experienced chef searching for inspiration, our collection of recipes has something for everyone.</p>
                 <p>Join our community today and start exploring the wonderful world of cooking!</p>
             </div>
         </section>
@@ -121,17 +133,17 @@
             <h2>Meet Our Team</h2>
             <div class="member">
                 <img src="chef1.jpg" alt="Chef 1">
-                <h3>John Doe</h3>
+                <h3>Jahnvi Arora</h3>
                 <p>Head Chef</p>
             </div>
             <div class="member">
                 <img src="chef2.jpg" alt="Chef 2">
-                <h3>Jane Smith</h3>
+                <h3>Aditya Negi</h3>
                 <p>Sous Chef</p>
             </div>
             <div class="member">
                 <img src="chef3.jpg" alt="Chef 3">
-                <h3>Michael Johnson</h3>
+                <h3>Tanisha More</h3>
                 <p>Pastry Chef</p>
             </div>
         </section>
@@ -141,5 +153,4 @@
         <p>&copy; 2024 Cookbook Website. All Rights Reserved.</p>
     </footer>
 </body>
-
 </html>

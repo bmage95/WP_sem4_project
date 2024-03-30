@@ -59,7 +59,7 @@ const server = http.createServer((req, res) => {
         });
     }
      else if (parsedUrl.pathname === '/today.html' && req.method === 'GET') {
-        // Serve the today.html file
+        // show the today.html file
         const filePath = path.join(__dirname, 'today.html');
         fs.readFile(filePath, (err, data) => {
             if (err) {
